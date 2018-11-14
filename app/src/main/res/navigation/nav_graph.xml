@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/citieChooser">
+
+    <fragment android:id="@+id/citieChooser" android:name="com.example.maks.city_test.fragments.city_chooser.CitieChooser"
+              android:label="fragment_citie_choser" tools:layout="@layout/fragment_citie_choser">
+        <action android:id="@+id/action_citieChooser_to_categoryChooser2" app:destination="@id/categoryChooser" app:launchSingleTop="true"/>
+    </fragment>
+    <fragment android:id="@+id/categoryChooser" android:name="com.example.maks.city_test.fragments.category_choser.CategoryChooser"
+              android:label="fragment_category_choser" tools:layout="@layout/fragment_category_choser">
+        <action android:id="@+id/action_categoryChooser_to_detailsScreen" app:destination="@id/detailsScreen" app:launchSingleTop="true"/>
+    </fragment>
+    <fragment android:id="@+id/organisationChooser" android:name="com.example.maks.city_test.fragments.OrganisationChooser"
+              android:label="fragment_organisation_chooser" tools:layout="@layout/fragment_organisation_chooser"/>
+    <fragment android:id="@+id/detailsScreen" android:name="com.example.maks.city_test.fragments.details.DetailsScreen"
+              android:label="fragment_details_screen" tools:layout="@layout/fragment_details_screen">
+        <action android:id="@+id/action_detailsScreen_to_organisationChooser"
+                app:destination="@id/organisationChooser" app:launchSingleTop="true"/>
+    </fragment>
+</navigation>
